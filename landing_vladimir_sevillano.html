@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Vladimir Sevillano Cruz: infraestructura y soporte TI, redes, apoyo a auditoría interna de SIG, controles tecnológicos, indicadores y capacitación técnica.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vladimir Sevillano Cruz | Tecnología, Control y Mejora">
+  <meta property="og:description" content="Experiencia en infraestructura tecnológica y servicios de TI, con formación reciente en auditoría interna de Sistemas Integrados de Gestión.">
+  <title>Vladimir Sevillano Cruz | Tecnología, Control y Mejora</title>
+  <style>
+    :root {
+      --bg: #08111f;
+      --surface: #101c2d;
+      --surface-2: #142238;
+      --text: #f4f7fb;
+      --muted: #b7c5d8;
+      --line: rgba(190, 210, 235, .17);
+      --accent: #63e6be;
+      --accent-2: #8bb7ff;
+      --dark: #071019;
+      --max: 1120px;
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: radial-gradient(ellipse at top right, #183151 0, var(--bg) 42%);
+      color: var(--text); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .container { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+    .topbar { padding: 20px 0; border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 800; letter-spacing: -.02em; }
+    .monogram { width: 42px; height: 42px; border-radius: 13px; display: grid; place-items: center; color: var(--dark); background: var(--accent); font-weight: 900; }
+    .navlinks { display: flex; gap: 22px; flex-wrap: wrap; align-items: center; }
+    .navlinks a { text-decoration: none; color: var(--muted); font-size: .94rem; }
+    .navlinks a:hover { color: var(--accent); }
+    .hero { padding: 88px 0 76px; }
+    .hero-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 50px; align-items: center; }
+    .eyebrow { color: var(--accent); font-weight: 800; letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; }
+    h1 { font-size: clamp(2.55rem, 6vw, 4.7rem); line-height: 1.04; letter-spacing: -.055em; margin: 16px 0 20px; }
+    h1 span { color: var(--accent); }
+    .lead { color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.24rem); max-width: 720px; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; border-radius: 999px; padding: 12px 19px; font-weight: 800; border: 1px solid transparent; transition: transform .15s ease, background .15s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--accent); color: #06151a; }
+    .btn-secondary { border-color: var(--line); color: var(--text); background: rgba(255,255,255,.03); }
+    .hero-card { background: linear-gradient(150deg, rgba(99,230,190,.13), rgba(139,183,255,.08)); border: 1px solid var(--line); border-radius: 28px; padding: 28px; box-shadow: 0 22px 70px rgba(0,0,0,.18); }
+    .hero-card .initials { font-size: 4.3rem; line-height: 1; font-weight: 900; letter-spacing: -.08em; color: var(--accent); }
+    .hero-card h2 { margin: 16px 0 8px; font-size: 1.2rem; }
+    .hero-card p { color: var(--muted); margin: 0; }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+    .pill { font-size: .82rem; border: 1px solid var(--line); color: #dce8f8; padding: 6px 10px; border-radius: 999px; }
+    .stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-top: 42px; }
+    .stat { border-top: 1px solid var(--line); padding-top: 15px; }
+    .stat strong { display: block; font-size: 1.02rem; }
+    .stat span { color: var(--muted); font-size: .88rem; }
+    section { padding: 70px 0; }
+    .section-head { max-width: 760px; margin-bottom: 30px; }
+    .section-head h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); letter-spacing: -.04em; line-height: 1.15; margin: 8px 0 12px; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card { padding: 24px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(16,28,45,.78); }
+    .icon { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 14px; background: rgba(99,230,190,.12); color: var(--accent); font-size: 1.35rem; }
+    .card h3 { margin: 16px 0 8px; font-size: 1.12rem; line-height: 1.3; }
+    .card p, .card li { color: var(--muted); font-size: .95rem; }
+    .card ul { padding-left: 18px; margin-bottom: 0; }
+    .split { display: grid; grid-template-columns: .85fr 1.15fr; gap: 34px; align-items: start; }
+    .feature-panel { border-radius: 26px; background: var(--surface-2); border: 1px solid var(--line); padding: 28px; }
+    .feature-panel h3 { margin-top: 0; font-size: 1.4rem; }
+    .feature-panel p { color: var(--muted); }
+    .principles { display: grid; gap: 18px; }
+    .principle { display: grid; grid-template-columns: 36px 1fr; gap: 14px; }
+    .check { color: var(--accent); font-size: 1.3rem; font-weight: 900; }
+    .principle h3 { margin: 0 0 4px; font-size: 1.05rem; }
+    .principle p { margin: 0; color: var(--muted); }
+    .timeline { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
+    .role { padding: 20px 22px; border: 1px solid var(--line); border-radius: 18px; background: rgba(16,28,45,.55); }
+    .role h3 { margin: 0 0 5px; font-size: 1rem; }
+    .role .company { color: var(--accent); font-weight: 700; font-size: .9rem; }
+    .role p { color: var(--muted); margin: 8px 0 0; font-size: .92rem; }
+    .education-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
+    .tagline { padding: 30px; border-radius: 26px; border: 1px solid rgba(99,230,190,.3); background: linear-gradient(130deg, rgba(99,230,190,.1), rgba(139,183,255,.07)); font-size: clamp(1.25rem, 3vw, 1.85rem); line-height: 1.4; letter-spacing: -.025em; }
+    .tagline strong { color: var(--accent); }
+    .contact { background: #0d1929; border-top: 1px solid var(--line); }
+    .contact-grid { display: grid; grid-template-columns: 1fr .9fr; gap: 40px; align-items: center; }
+    .contact-items { display: grid; gap: 12px; }
+    .contact-item { padding: 15px 17px; border: 1px solid var(--line); border-radius: 14px; text-decoration: none; background: rgba(255,255,255,.025); overflow-wrap: anywhere; }
+    .contact-item span { color: var(--muted); font-size: .83rem; display: block; }
+    footer { padding: 24px 0; color: #8fa3bd; font-size: .85rem; border-top: 1px solid var(--line); }
+    .foot { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .small-note { font-size: .84rem; color: #91a6bf; }
+    @media (max-width: 850px) {
+      .hero-grid, .split, .contact-grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 58px; }
+      .hero-card { max-width: 560px; }
+      .cards { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 600px) {
+      .container { width: min(100% - 28px, var(--max)); }
+      .nav { align-items: flex-start; flex-direction: column; }
+      .navlinks { gap: 12px; }
+      .cards, .timeline, .education-grid, .stats { grid-template-columns: 1fr; }
+      section { padding: 52px 0; }
+      .hero { padding: 48px 0; }
+      .hero-card { padding: 22px; }
+      .actions .btn { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="monogram">VS</span>
+        <span>Vladimir Sevillano Cruz</span>
+      </a>
+      <nav class="navlinks" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#propuesta">Propuesta de valor</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#formacion">Formación</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Tecnología · Control · Mejora continua</div>
+          <h1>Conecto la operación de TI con una visión de <span>control y mejora.</span></h1>
+          <p class="lead">Soy Ingeniero de Sistemas de la Información con experiencia en infraestructura tecnológica, redes, telecomunicaciones y soporte de servicios de TI. Actualmente complemento esa trayectoria con formación en auditoría interna de Sistemas Integrados de Gestión.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#contacto">Hablemos de tu necesidad <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/vladimirsevillano" target="_blank" rel="noopener noreferrer">Ver perfil de LinkedIn</a>
+          </div>
+          <div class="stats" aria-label="Resumen profesional">
+            <div class="stat"><strong>Infraestructura TI</strong><span>Redes, servidores y soporte</span></div>
+            <div class="stat"><strong>Auditoría interna SIG</strong><span>Formación reciente</span></div>
+            <div class="stat"><strong>Gestión operativa</strong><span>Incidentes, documentación e indicadores</span></div>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <div class="initials" aria-hidden="true">VS.</div>
+          <h2>Perfil profesional</h2>
+          <p>Experiencia práctica en operaciones tecnológicas y servicios corporativos, con interés en contribuir al fortalecimiento de procesos, controles y gestión de riesgos.</p>
+          <div class="pill-list">
+            <span class="pill">Redes y servidores</span>
+            <span class="pill">Servicios de TI</span>
+            <span class="pill">Auditoría interna SIG</span>
+            <span class="pill">ISO 27001 / NIST</span>
+            <span class="pill">Excel y Power BI</span>
+            <span class="pill">Formación técnica</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Servicios profesionales</div>
+          <h2>¿En qué puedo aportar a tu organización?</h2>
+          <p>Servicios orientados a necesidades tecnológicas y de gestión. El alcance de cada trabajo se define según los requisitos, los recursos y las competencias aplicables.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="icon" aria-hidden="true">⌘</div>
+            <h3>Infraestructura y soporte de TI</h3>
+            <p>Apoyo técnico en redes, servidores, plataformas e infraestructura corporativa.</p>
+            <ul><li>Análisis y gestión de incidentes</li><li>Documentación técnica</li><li>Acompañamiento en actualizaciones tecnológicas</li></ul>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">✓</div>
+            <h3>Apoyo a auditoría interna y SIG</h3>
+            <p>Apoyo en actividades documentales y de preparación para auditorías internas, conforme al alcance acordado.</p>
+            <ul><li>Organización de evidencias</li><li>Registro de hallazgos</li><li>Seguimiento de acciones de mejora</li></ul>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">⛨</div>
+            <h3>Controles tecnológicos y seguridad</h3>
+            <p>Apoyo a la revisión documental de controles y riesgos asociados a procesos de TI.</p>
+            <ul><li>Documentación de controles</li><li>Organización de evidencias</li><li>Referencias ISO 27001 y NIST</li></ul>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">▥</div>
+            <h3>Indicadores e informes de gestión TI</h3>
+            <p>Organización de información operativa para facilitar el seguimiento y la toma de decisiones.</p>
+            <ul><li>Informes e indicadores</li><li>Seguimiento de incidentes y servicios</li><li>Tableros con Excel y Power BI</li></ul>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">◎</div>
+            <h3>Capacitación y transferencia de conocimiento</h3>
+            <p>Apoyo a equipos de soporte mediante formación técnica, documentación y orientación operativa.</p>
+            <ul><li>Capacitación de equipos</li><li>Procedimientos operativos</li><li>Transferencia de conocimiento</li></ul>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">↗</div>
+            <h3>Mejora de procesos tecnológicos</h3>
+            <p>Conexión entre la operación diaria, los procedimientos y el seguimiento de oportunidades de mejora.</p>
+            <ul><li>Revisión de procesos documentados</li><li>Identificación de oportunidades</li><li>Seguimiento de acciones acordadas</li></ul>
+          </article>
+        </div>
+        <p class="small-note" style="margin-top:18px">Nota: la oferta de apoyo a auditorías no implica certificación como auditor líder ni sustituye la evaluación independiente que corresponda a cada organización.</p>
+      </div>
+    </section>
+
+    <section id="propuesta">
+      <div class="container split">
+        <div>
+          <div class="eyebrow">Mi propuesta de valor</div>
+          <div class="section-head">
+            <h2>Comprender la operación para ayudar a mejorarla.</h2>
+            <p>Mi diferenciador es integrar experiencia técnica con una perspectiva de control, documentación y mejora continua.</p>
+          </div>
+          <div class="tagline">“Conecto la experiencia operativa en infraestructura y servicios de TI con el enfoque de <strong>auditoría, gestión de riesgos y mejora continua</strong> para apoyar el fortalecimiento de procesos y controles tecnológicos.”</div>
+        </div>
+        <div class="feature-panel">
+          <h3>¿Qué aporta esta combinación?</h3>
+          <div class="principles">
+            <div class="principle"><span class="check">✓</span><div><h3>Visión operativa</h3><p>Comprensión de redes, infraestructura, servidores, soporte y continuidad de servicios.</p></div></div>
+            <div class="principle"><span class="check">✓</span><div><h3>Enfoque de control</h3><p>Formación en auditoría interna, riesgos, documentación y gestión de hallazgos.</p></div></div>
+            <div class="principle"><span class="check">✓</span><div><h3>Información para decidir</h3><p>Interés y conocimientos en informes, indicadores y herramientas de análisis como Excel y Power BI.</p></div></div>
+            <div class="principle"><span class="check">✓</span><div><h3>Transferencia de conocimiento</h3><p>Experiencia documentada en formación de equipos de TI y apoyo a la operación.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Trayectoria</div>
+          <h2>Experiencia que conecta tecnología y servicio</h2>
+          <p>Selección de cargos que reflejan mi recorrido en infraestructura, operaciones, soporte y servicios tecnológicos. Fechas y cargos según mi hoja de vida.</p>
+        </div>
+        <div class="timeline">
+          <article class="role"><h3>Infrastructure Platform Analyst</h3><div class="company">Accenture Colombia · Oct. 2025 – Sep. 2026</div><p>Administración y soporte de plataformas de infraestructura para clientes y entornos corporativos.</p></article>
+          <article class="role"><h3>Ingeniero de Soporte NOC</h3><div class="company">Liberty Networks · Ene. 2025 – Ago. 2025</div><p>Soporte de operación de redes y atención de eventos e incidentes.</p></article>
+          <article class="role"><h3>Formador de TI</h3><div class="company">Comdata España &amp; Latam · Abr. 2021 – Abr. 2022</div><p>Formación y acompañamiento de equipos en procesos de soporte.</p></article>
+          <article class="role"><h3>Administrador de Infraestructura de TI – Windows Server 2016</h3><div class="company">Vision Software S.A.S. · Ago. 2017 – Ene. 2019</div><p>Administración de infraestructura y servidores Windows.</p></article>
+          <article class="role"><h3>Especialista Preventa Soluciones de Infraestructura IT</h3><div class="company">Accesar S.A.S. · Feb. 2016 – Jul. 2017</div><p>Apoyo en soluciones de infraestructura tecnológica y preventa.</p></article>
+          <article class="role"><h3>Jefe de Servicios de TI</h3><div class="company">VERTICAL IT Consulting Services Ltd. · Ene. 2015 – Dic. 2015</div><p>Experiencia en gestión y coordinación de servicios tecnológicos.</p></article>
+          <article class="role"><h3>IT Support Specialist</h3><div class="company">Wipro Ltd. · Dic. 2013 – Dic. 2014</div><p>Soporte de TI en entorno corporativo.</p></article>
+          <article class="role"><h3>Administrador de Servicios de Red e Infraestructuras LAN</h3><div class="company">CompuNet · Feb. 2008 – Mar. 2012</div><p>Administración de redes e infraestructura LAN.</p></article>
+        </div>
+        <p class="small-note" style="margin-top:18px">La lista es selectiva y no representa necesariamente la totalidad de la experiencia laboral.</p>
+      </div>
+    </section>
+
+    <section id="formacion">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Formación y conocimientos</div>
+          <h2>Base académica y actualización profesional</h2>
+          <p>La formación reciente en auditoría interna complementa la experiencia técnica previa.</p>
+        </div>
+        <div class="education-grid">
+          <article class="card">
+            <div class="icon" aria-hidden="true">✦</div>
+            <h3>Ingeniería de Sistemas de la Información</h3>
+            <p>Corporación Universitaria Empresarial de Salamanca · Título obtenido en 2026, según hoja de vida.</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">✓</div>
+            <h3>Diplomado en Auditoría Interna de SIG</h3>
+            <p>ConCiencia Latam · 140 horas · Formación en ISO 9001, ISO 14001 e ISO 45001, según documentación aportada.</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">⌁</div>
+            <h3>Gestión de riesgos y metodología de auditoría</h3>
+            <p>Formación reportada en ISO 19011 y gestión de hallazgos.</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">⌘</div>
+            <h3>Redes y gestión de servicios</h3>
+            <p>Tecnólogo en Redes Cisco; conocimientos en BGP, OSPF, WAN, MPLS/VPLS, Windows Server, Linux e ITIL.</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">▤</div>
+            <h3>Seguridad y análisis</h3>
+            <p>Conocimientos declarados en ISO 27001, NIST, ISO/IEC 42001:2023, Excel, Power BI y Python.</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">◎</div>
+            <h3>Idiomas</h3>
+            <p>Español nativo e inglés B2, según hoja de vida.</p>
+          </article>
+        </div>
+        <p class="small-note" style="margin-top:18px">Las referencias a normas expresan formación o conocimientos declarados; no implican por sí mismas acreditación, certificación de auditor ni autorización para certificar sistemas de gestión.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="tagline">Mi objetivo es ayudar a que las organizaciones tengan una operación tecnológica más comprensible, documentada y alineada con sus procesos de control y <strong>mejora continua</strong>.</div>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="container contact-grid">
+        <div>
+          <div class="eyebrow">Contacto</div>
+          <h2 style="font-size:clamp(2rem,4vw,3rem);line-height:1.12;letter-spacing:-.04em;margin:10px 0 14px">¿Hablamos de tu proyecto u oportunidad?</h2>
+          <p style="color:var(--muted)">Estoy abierto a conversar sobre oportunidades laborales, servicios de apoyo tecnológico y proyectos relacionados con infraestructura, procesos y gestión.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://wa.me/573150516532?text=Hola%20Vladimir%2C%20vi%20tu%20landing%20page%20y%20quisiera%20conversar%20sobre%20tus%20servicios." target="_blank" rel="noopener noreferrer">Contactar por WhatsApp</a>
+            <a class="btn btn-secondary" href="mailto:vlacursez@gmail.com?subject=Consulta%20profesional">Enviar correo</a>
+          </div>
+        </div>
+        <div class="contact-items">
+          <a class="contact-item" href="mailto:vlacursez@gmail.com"><span>Correo electrónico</span>vlacursez@gmail.com</a>
+          <a class="contact-item" href="https://wa.me/573150516532" target="_blank" rel="noopener noreferrer"><span>WhatsApp / teléfono</span>+57 315 051 6532</a>
+          <a class="contact-item" href="https://www.linkedin.com/in/vladimirsevillano" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span>linkedin.com/in/vladimirsevillano</a>
+          <div class="contact-item"><span>Ubicación</span>Barranquilla, Atlántico, Colombia · Disponibilidad a conversar sobre modalidades remotas, híbridas o presenciales según la oportunidad.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <span>© <span id="year">2026</span> Vladimir Sevillano Cruz</span>
+      <span>Tecnología · Control · Mejora continua</span>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
