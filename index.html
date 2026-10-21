@@ -111,6 +111,11 @@
       .hero-card { padding: 22px; }
       .actions .btn { width: 100%; }
     }
+
+    @media (max-width: 700px) {
+      #proyectos .cards { grid-template-columns: 1fr !important; }
+    }
+
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
   </style>
 </head>
@@ -125,6 +130,7 @@
         <a href="#servicios">Servicios</a>
         <a href="#propuesta">Propuesta de valor</a>
         <a href="#experiencia">Experiencia</a>
+        <a href="#proyectos">Proyectos destacados</a>
         <a href="#formacion">Formación</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -253,6 +259,42 @@
           <article class="role"><h3>Administrador de Servicios de Red e Infraestructuras LAN</h3><div class="company">CompuNet · Feb. 2008 – Mar. 2012</div><p>Administración de redes e infraestructura LAN.</p></article>
         </div>
         <p class="small-note" style="margin-top:18px">La lista es selectiva y no representa necesariamente la totalidad de la experiencia laboral.</p>
+      </div>
+    </section>
+
+
+    <section id="proyectos">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Experiencia aplicada</div>
+          <h2>Proyectos destacados</h2>
+          <p>Experiencias seleccionadas en modernización de infraestructura, conectividad inalámbrica y continuidad operativa.</p>
+        </div>
+        <div class="cards" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+          <article class="card">
+            <div class="icon" aria-hidden="true">⌁</div>
+            <h3>Proyecto de renovación tecnológica WLAN Cisco</h3>
+            <p><strong>Nov. 2025 – Feb. 2026</strong></p>
+            <p>Participación activa en la migración de puntos de acceso inalámbricos (Access Points) Cisco modelo Catalyst 9130AXI, incluida su configuración y administración en sedes de Promigas en Barranquilla.</p>
+            <ul>
+              <li>Migración de equipos de acceso inalámbrico.</li>
+              <li>Configuración y administración de los puntos de acceso en las sedes.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">▣</div>
+            <h3>Migración de plataforma de servidores Windows Server 2012 a 2016</h3>
+            <p><strong>Modernización de infraestructura</strong></p>
+            <p>Liderazgo y ejecución de la migración integral de la infraestructura de servidores para modernizar la plataforma y cumplir los requisitos técnicos.</p>
+            <ul>
+              <li>Migración de Active Directory Domain Services (AD DS) y replicación, preservando la integridad de las directivas de grupo (GPO) y la estructura de unidades organizativas (OU).</li>
+              <li>Actualización y optimización de los roles DNS y DHCP.</li>
+              <li>Pruebas de rendimiento y aceptación de usuario (UAT).</li>
+              <li>Implementación de funciones de seguridad y rendimiento de Windows Server 2016, con preparación para virtualización avanzada mediante Hyper-V.</li>
+            </ul>
+            <p><strong>Resultado:</strong> plataforma más estable y segura, con rendimiento optimizado, soporte extendido del fabricante y reducción de riesgos operativos y de seguridad.</p>
+          </article>
+        </div>
       </div>
     </section>
 
