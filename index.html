@@ -84,6 +84,27 @@
     .role h3 { margin: 0 0 5px; font-size: 1rem; }
     .role .company { color: var(--accent); font-weight: 700; font-size: .9rem; }
     .role p { color: var(--muted); margin: 8px 0 0; font-size: .92rem; }
+
+    .role { position: relative; padding: 20px 22px; border: 1px solid var(--line); border-radius: 18px; background: rgba(16,28,45,.55); }
+    .role-heading { display: flex; align-items: center; gap: 14px; min-width: 0; }
+    .company-logo-wrap { width: 58px; height: 54px; flex: 0 0 58px; display: grid; place-items: center; border-radius: 13px; background: #f7f9fc; border: 1px solid rgba(255,255,255,.15); overflow: hidden; }
+    .company-logo { display: block; width: 100%; height: 100%; padding: 7px; object-fit: contain; }
+    .company-monogram { display: none; color: #142238; font-size: .78rem; line-height: 1; font-weight: 900; letter-spacing: -.04em; }
+    .company-logo-wrap.logo-fallback .company-logo { display: none; }
+    .company-logo-wrap.logo-fallback .company-monogram { display: block; }
+    .role-copy { min-width: 0; }
+    .role h3 { margin: 0 0 5px; font-size: 1rem; line-height: 1.35; }
+    .role .company { color: var(--accent); font-weight: 700; font-size: .9rem; }
+    .role-category { display: inline-flex; align-items: center; gap: 7px; margin-top: 12px; color: #c5d5e8; font-size: .78rem; border: 1px solid var(--line); border-radius: 999px; padding: 4px 9px; }
+    .role-category .category-symbol { color: var(--accent); font-size: .95rem; }
+    .role p { color: var(--muted); margin: 10px 0 0; font-size: .92rem; }
+    @media (max-width: 600px) {
+      .role { padding: 16px; }
+      .role-heading { align-items: flex-start; gap: 11px; }
+      .company-logo-wrap { width: 48px; height: 46px; flex-basis: 48px; border-radius: 11px; }
+      .role h3 { font-size: .96rem; }
+    }
+
     .education-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
     .tagline { padding: 30px; border-radius: 26px; border: 1px solid rgba(99,230,190,.3); background: linear-gradient(130deg, rgba(99,230,190,.1), rgba(139,183,255,.07)); font-size: clamp(1.25rem, 3vw, 1.85rem); line-height: 1.4; letter-spacing: -.025em; }
     .tagline strong { color: var(--accent); }
@@ -249,14 +270,14 @@
           <p>Selección de cargos que reflejan mi recorrido en infraestructura, operaciones, soporte y servicios tecnológicos. Fechas y cargos según mi hoja de vida.</p>
         </div>
         <div class="timeline">
-          <article class="role"><h3>Infrastructure Platform Analyst</h3><div class="company">Accenture Colombia · Oct. 2025 – Sep. 2026</div><p>Administración y soporte de plataformas de infraestructura para clientes y entornos corporativos.</p></article>
-          <article class="role"><h3>Ingeniero de Soporte NOC</h3><div class="company">Liberty Networks · Ene. 2025 – Ago. 2025</div><p>Soporte de operación de redes y atención de eventos e incidentes.</p></article>
-          <article class="role"><h3>Formador de TI</h3><div class="company">Comdata España &amp; Latam · Abr. 2021 – Abr. 2022</div><p>Formación y acompañamiento de equipos en procesos de soporte.</p></article>
-          <article class="role"><h3>Administrador de Infraestructura de TI – Windows Server 2016</h3><div class="company">Vision Software S.A.S. · Ago. 2017 – Ene. 2019</div><p>Administración de infraestructura y servidores Windows.</p></article>
-          <article class="role"><h3>Especialista Preventa Soluciones de Infraestructura IT</h3><div class="company">Accesar S.A.S. · Feb. 2016 – Jul. 2017</div><p>Apoyo en soluciones de infraestructura tecnológica y preventa.</p></article>
-          <article class="role"><h3>Jefe de Servicios de TI</h3><div class="company">VERTICAL IT Consulting Services Ltd. · Ene. 2015 – Dic. 2015</div><p>Experiencia en gestión y coordinación de servicios tecnológicos.</p></article>
-          <article class="role"><h3>IT Support Specialist</h3><div class="company">Wipro Ltd. · Dic. 2013 – Dic. 2014</div><p>Soporte de TI en entorno corporativo.</p></article>
-          <article class="role"><h3>Administrador de Servicios de Red e Infraestructuras LAN</h3><div class="company">CompuNet · Feb. 2008 – Mar. 2012</div><p>Administración de redes e infraestructura LAN.</p></article>
+          <article class="role"><div class="role-heading"><div class="company-logo-wrap" aria-hidden="true"><img class="company-logo" src="https://www.google.com/s2/favicons?domain=accenture.com&amp;sz=128" alt="" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('logo-fallback')"><span class="company-monogram">AC</span></div><div class="role-copy"><h3>Infrastructure Platform Analyst</h3><div class="company">Accenture Colombia · Oct. 2025 – Sep. 2026</div></div></div><div class="role-category"><span class="category-symbol" aria-hidden="true">▣</span>Infraestructura y plataformas</div><p>Administración y soporte de plataformas de infraestructura para clientes y entornos corporativos.</p></article>
+          <article class="role"><div class="role-heading"><div class="company-logo-wrap" aria-hidden="true"><img class="company-logo" src="https://www.google.com/s2/favicons?domain=libertynetworks.com&amp;sz=128" alt="" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('logo-fallback')"><span class="company-monogram">LN</span></div><div class="role-copy"><h3>Ingeniero de Soporte NOC</h3><div class="company">Liberty Networks · Ene. 2025 – Ago. 2025</div></div></div><div class="role-category"><span class="category-symbol" aria-hidden="true">⌁</span>Redes y operaciones NOC</div><p>Soporte de operación de redes y atención de eventos e incidentes.</p></article>
+          <article class="role"><div class="role-heading"><div class="company-logo-wrap" aria-hidden="true"><img class="company-logo" src="https://www.google.com/s2/favicons?domain=foundever.com&amp;sz=128" alt="" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('logo-fallback')"><span class="company-monogram">CO</span></div><div class="role-copy"><h3>Formador de TI</h3><div class="company">Comdata España &amp; Latam · Abr. 2021 – Abr. 2022</div></div></div><div class="role-category"><span class="category-symbol" aria-hidden="true">◎</span>Formación y soporte</div><p>Formación y acompañamiento de equipos en procesos de soporte.</p></article>
+          <article class="role"><div class="role-heading"><div class="company-logo-wrap" aria-hidden="true"><img class="company-logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23f7f9fc'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-family='Arial,sans-serif' font-size='20' font-weight='700' fill='%23142238'%3EVS%3C/text%3E%3C/svg%3E" alt="" loading="lazy" decoding="async"><span class="company-monogram">VS</span></div><div class="role-copy"><h3>Administrador de Infraestructura de TI – Windows Server 2016</h3><div class="company">Vision Software S.A.S. · Ago. 2017 – Ene. 2019</div></div></div><div class="role-category"><span class="category-symbol" aria-hidden="true">▣</span>Servidores e infraestructura</div><p>Administración de infraestructura y servidores Windows.</p></article>
+          <article class="role"><div class="role-heading"><div class="company-logo-wrap" aria-hidden="true"><img class="company-logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23f7f9fc'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-family='Arial,sans-serif' font-size='20' font-weight='700' fill='%23142238'%3EAS%3C/text%3E%3C/svg%3E" alt="" loading="lazy" decoding="async"><span class="company-monogram">AS</span></div><div class="role-copy"><h3>Especialista Preventa Soluciones de Infraestructura IT</h3><div class="company">Accesar S.A.S. · Feb. 2016 – Jul. 2017</div></div></div><div class="role-category"><span class="category-symbol" aria-hidden="true">↗</span>Soluciones de infraestructura</div><p>Apoyo en soluciones de infraestructura tecnológica y preventa.</p></article>
+          <article class="role"><div class="role-heading"><div class="company-logo-wrap" aria-hidden="true"><img class="company-logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23f7f9fc'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-family='Arial,sans-serif' font-size='20' font-weight='700' fill='%23142238'%3EVI%3C/text%3E%3C/svg%3E" alt="" loading="lazy" decoding="async"><span class="company-monogram">VI</span></div><div class="role-copy"><h3>Jefe de Servicios de TI</h3><div class="company">VERTICAL IT Consulting Services Ltd. · Ene. 2015 – Dic. 2015</div></div></div><div class="role-category"><span class="category-symbol" aria-hidden="true">⚙</span>Gestión de servicios TI</div><p>Experiencia en gestión y coordinación de servicios tecnológicos.</p></article>
+          <article class="role"><div class="role-heading"><div class="company-logo-wrap" aria-hidden="true"><img class="company-logo" src="https://www.google.com/s2/favicons?domain=wipro.com&amp;sz=128" alt="" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('logo-fallback')"><span class="company-monogram">WI</span></div><div class="role-copy"><h3>IT Support Specialist</h3><div class="company">Wipro Ltd. · Dic. 2013 – Dic. 2014</div></div></div><div class="role-category"><span class="category-symbol" aria-hidden="true">⌘</span>Soporte corporativo</div><p>Soporte de TI en entorno corporativo.</p></article>
+          <article class="role"><div class="role-heading"><div class="company-logo-wrap" aria-hidden="true"><img class="company-logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23f7f9fc'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-family='Arial,sans-serif' font-size='20' font-weight='700' fill='%23142238'%3ECN%3C/text%3E%3C/svg%3E" alt="" loading="lazy" decoding="async"><span class="company-monogram">CN</span></div><div class="role-copy"><h3>Administrador de Servicios de Red e Infraestructuras LAN</h3><div class="company">CompuNet · Feb. 2008 – Mar. 2012</div></div></div><div class="role-category"><span class="category-symbol" aria-hidden="true">⌁</span>Redes e infraestructura LAN</div><p>Administración de redes e infraestructura LAN.</p></article>
         </div>
         <p class="small-note" style="margin-top:18px">La lista es selectiva y no representa necesariamente la totalidad de la experiencia laboral.</p>
       </div>
@@ -374,6 +395,15 @@
       <span>Tecnología · Control · Mejora continua</span>
     </div>
   </footer>
+
+  <script>
+    document.querySelectorAll(".company-logo").forEach(function (logo) {
+      logo.addEventListener("error", function () {
+        this.parentElement.classList.add("logo-fallback");
+      }, { once: true });
+    });
+  </script>
+
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
